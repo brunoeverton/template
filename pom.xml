@@ -9,7 +9,6 @@
 
 	<name>template</name>
 
-
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -43,7 +42,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+				
 		<!-- SPRING DATA AND DATABASE -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -109,7 +112,6 @@
 		    <groupId>org.liquibase</groupId>
 		    <artifactId>liquibase-core</artifactId>
 		</dependency>		
-		<!-- FIM liquibase-core -->		
 	</dependencies>
 
 	<build>

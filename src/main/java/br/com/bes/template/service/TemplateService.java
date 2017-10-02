@@ -36,8 +36,9 @@ public class TemplateService {
 	 * @param templateVO
 	 * @return
 	 */
-	public Template saveTemplate(TemplateVO templateVO){
-		return templateDAO.save(templateVO.createEntity());
+	public TemplateVO saveTemplate(TemplateVO templateVO){
+		Template template = templateDAO.save(templateVO.createEntity());
+		return new TemplateVO(template);
 
 	}
 	

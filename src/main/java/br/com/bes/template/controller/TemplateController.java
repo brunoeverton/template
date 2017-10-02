@@ -13,12 +13,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.bes.template.base.builder.MessageBuilder;
 import br.com.bes.template.base.vo.ResponseVO;
-import br.com.bes.template.entity.Template;
 import br.com.bes.template.service.TemplateService;
 import br.com.bes.template.vo.TemplateVO;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 
+/**
+ * Controlado da entidade template 
+ * @author bruno.everton
+ *
+ */
 @RestController
 @RequestMapping("/template")
 public class TemplateController {
@@ -43,8 +47,8 @@ public class TemplateController {
 	@ApiOperation(value = "Salva novo Template" , nickname = "saveTemplate", notes="Salva um novo registro de template no banco de dados.")
 	@RequestMapping(method = RequestMethod.POST, value = "/saveTemplate")
 	@ResponseBody
-	public ResponseVO<Template> saveTemplate(@RequestBody  TemplateVO templateVO) {
-		MessageBuilder<Template> result = new MessageBuilder<Template>();
+	public ResponseVO<TemplateVO> saveTemplate(@ApiParam(value="Dados do template que deverá ser cadastrado") @RequestBody TemplateVO templateVO) {
+		MessageBuilder<TemplateVO> result = new MessageBuilder<TemplateVO>();
 		if(templateVO.getId()!=null) {
 			result.addErrorMessage("Para cadastrar um novo registro, o ID deve ser nulo.");
 		}else {		

@@ -3,6 +3,7 @@ package br.com.bes.template.base.vo;
 import java.util.List;
 
 import br.com.bes.template.base.enums.ResponseStatusEnum;
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
@@ -11,6 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
  *
  * @param <E>
  */
+@ApiModel(description="Estrutura de resposta da API")
 public class ResponseVO<E> {
 	
 	@ApiModelProperty(notes = "Entidade de retorno")

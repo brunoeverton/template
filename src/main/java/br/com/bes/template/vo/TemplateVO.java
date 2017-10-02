@@ -1,15 +1,24 @@
 package br.com.bes.template.vo;
 
 import br.com.bes.template.entity.Template;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 /**
  * VO de template
  * @author bruno.everton
  *
  */
+@ApiModel(description="Template VO com as propriedades da entidade template")
 public class TemplateVO {
+	
+	@ApiModelProperty("Identificador do Template salvo no banco de dados")
 	private Long id;
+	
+	@ApiModelProperty("Nome do template. Não é único no banco e pode ser nulo")
 	private String name;
+	
+	@ApiModelProperty("Valor associado ao template. Deve ser numérico, não é único e pode ser nulo")
 	private Integer value;
 	
 	/**
